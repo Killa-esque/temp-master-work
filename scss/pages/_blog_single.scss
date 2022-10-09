@@ -1,0 +1,532 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.breadcrumbs {
+  padding: 15px 20px;
+  margin-top: 90px;
+
+  .container-fluid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+
+    a {
+      @include text(14px, 400, $primary_text_color, 0);
+      text-decoration: none;
+    }
+
+    .breadcrumb_last {
+      @include text(14px, 400, $primary_text_color, 0);
+    }
+  }
+}
+
+.blog-single-main {
+  .blog-single-1 {
+    padding-top: 50px;
+
+    .container-fluid {
+      @media screen and (min-width: 300px) {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 576px) {
+        max-width: 100%;
+        padding: 0 25px;
+        margin: auto;
+      }
+
+      @media screen and (min-width:992px) {
+        max-width: 100%;
+
+      }
+
+      @media screen and (min-width:1200px) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 16px 25px;
+      }
+
+      .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+          @include max-width-750px();
+
+          .tagname {
+            background: rgba(0, 128, 0, 0.2);
+            padding: 5px 16px;
+            display: inline-block;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            @include text (14px, 700, #008000, 0);
+          }
+
+          .title {
+            line-height: 50px;
+            @include text (45px, 700, $primary_text_color, 0);
+            margin: 15px 0;
+          }
+
+          .blog-list {
+            height: 25px;
+            padding: 0;
+            @include py-between-each-para();
+            margin-top: 0;
+
+            li {
+              list-style-type: none;
+              display: inline-block;
+              margin-right: 10px;
+
+              p {
+                @include text (15px, 600, $primary_text_color, 0);
+
+                span {
+                  @include text (15px, 600, $primary_text_color, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .body {
+        @include max-width-750px();
+        @include py-between-each-para();
+
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+          @include hover-translateY();
+        }
+      }
+
+      .foot {
+        @include max-width-750px();
+
+        .content {
+          .paragraph {
+            @include max-width-750px();
+            @include text (16px, 500, $secondary_text_color, 0);
+            @include py-between-each-para();
+            line-height: 24.5px;
+          }
+
+          .paragraph-img {
+            @include py-between-each-para();
+            @include max-width-750px();
+
+            .left {
+              padding-top: 0;
+              padding-bottom: 0;
+              padding-left: 0;
+
+              @media screen and (min-width:992px) {
+                margin-top: 20px;
+              }
+
+              @include py-between-each-para();
+
+              img {
+                max-width: 100%;
+                height: 90%;
+                object-fit: cover;
+                vertical-align: middle;
+                border-style: none;
+                @include hover-translateY();
+              }
+            }
+
+            .right {
+              padding-top: 0;
+              padding-bottom: 0;
+
+              .paragraph {
+                @include text (16px, 500, $secondary_text_color, 0);
+                line-height: 24.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blog-single-2 {
+    padding-bottom: 30px;
+
+    .container-fluid {
+      @media screen and (min-width: 300px) {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 576px) {
+        max-width: 100%;
+        padding: 0 25px;
+        margin: auto;
+      }
+
+      @media screen and (min-width:992px) {
+        max-width: 100%;
+
+      }
+
+      @media screen and (min-width:1200px) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 16px 25px;
+      }
+
+      .wrapper {
+        .blockquote {
+          @include max-width-750px();
+          @include text (16px, 500, $secondary_text_color, 0);
+          @include py-between-each-para();
+          border-left: 3px solid #5A5A5A;
+          background: #f7f9fc;
+          padding: 25px 25px 25px 45px;
+
+          .quotes {
+            @include text(24px, 500, $primary_text_color, 0);
+            @include py-between-each-para();
+          }
+
+          .blockquote-footer {
+            @include text(16px, 300, $secondary_text_color, 0);
+            margin-top: 20px;
+            padding: 0;
+
+            &::before {
+              content: "\2014 \00A0";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blog-single-3 {
+    .container-fluid {
+      @media screen and (min-width: 300px) {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 576px) {
+        max-width: 100%;
+        padding: 0 25px;
+        margin: auto;
+      }
+
+      @media screen and (min-width:992px) {
+        max-width: 100%;
+
+      }
+
+      @media screen and (min-width:1200px) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 16px 25px;
+      }
+
+      .wrapper {
+        .main-content {
+          @include max-width-750px();
+
+          .head {
+            @include py-between-each-para();
+            @include text(35px, 700, $primary_text_color, 0);
+            line-height: 40px;
+            margin: 20px 0;
+            display: inline-block;
+
+          }
+
+          .sub-head {
+            @include text(20px, 500, $secondary_text_color, 0);
+            font-weight: normal;
+            line-height: 30px;
+            margin-bottom: 40px;
+            font-style: italic;
+
+          }
+
+          .para {
+            @include py-between-each-para();
+            @include text(16px, 500, $secondary_text_color, 0);
+            line-height: 24.5px;
+            margin-top: 20px;
+          }
+
+          .para-img {
+            @include py-between-each-para();
+            @include max-width-750px();
+
+            .left {
+              padding-top: 0;
+              padding-bottom: 0;
+              padding-left: 0;
+
+              @media screen and (min-width:992px) {
+                margin-top: 30px;
+                margin-bottom: 20px;
+              }
+
+              @include py-between-each-para();
+
+              img {
+                max-width: 100%;
+                height: 90%;
+                object-fit: cover;
+                vertical-align: middle;
+                border-style: none;
+                @include hover-translateY();
+              }
+            }
+
+            .except {
+              img {
+                height: 95%;
+              }
+
+              @media screen and (min-width:992px) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+              }
+            }
+
+            .right {
+              padding-top: 0;
+              padding-bottom: 0;
+              padding-right: 0;
+
+              .para {
+                @include text (16px, 500, $secondary_text_color, 0);
+                line-height: 24.5px;
+              }
+            }
+          }
+
+          .post-navigation {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            .post-prev{
+              margin-top: 15px;
+	            padding-top: 10px;
+              .nav-title {
+                @include text (16px, 400, $secondary_text_color, 0);
+                display: block;
+                margin-bottom: 9px;
+                span {
+                  font-size: 12px;
+                  color: $secondary_text_color;
+                }
+              }
+              .posts-view{
+                @include py-between-each-para();
+                display: grid;
+                grid-template-columns: 23% 72%;
+                grid-gap: 4%;
+                align-items: center;
+                touch-action: manipulation;
+                text-decoration: none;
+                img{
+                  max-width: 100%;
+                  height: auto;
+                  vertical-align: middle;
+                  border-style: none;
+                  border-radius: 5px;
+                }
+                label{
+                  cursor: pointer;
+                  @include text (18px, 800, $primary_text_color, 0);
+                  transition: 0.3s;
+                  &:hover{
+                    @include text (18px, 800, $secondary_text_color, 0);
+                  }
+                }
+              }
+            }
+            .post-next{
+              margin-top: 15px;
+	            padding-top: 10px;
+              text-align: right;
+              .nav-title {
+                @include text (16px, 400, $secondary_text_color, 0);
+                display: block;
+                margin-bottom: 9px;
+                // text-align: right ;
+                span {
+                  font-size: 12px;
+                  color: $secondary_text_color;
+                }
+              }
+              .posts-view{
+                @include py-between-each-para();
+                display: grid;
+                grid-template-columns: 72% 23%;
+                grid-gap: 4%;
+                align-items: center;
+                text-decoration: none;
+                // @media screen and (max-width:) {
+
+                // }
+                label{
+                  cursor: pointer;
+                  @include text (18px, 800, $primary_text_color, 0);
+                  transition: 0.3s;
+                  &:hover{
+                    @include text (18px, 800, $secondary_text_color, 0);
+                  }
+                }
+                img{
+                  max-width: 100%;
+                  height: auto;
+                  vertical-align: middle;
+                  border-style: none;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blog-single-4 {
+    display: block;
+    padding-top: 30px;
+    .container-fluid {
+      @media screen and (min-width: 300px) {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 576px) {
+        max-width: 100%;
+        padding: 0 25px;
+        margin: auto;
+      }
+
+      @media screen and (min-width:992px) {
+        max-width: 100%;
+
+      }
+
+      @media screen and (min-width:1200px) {
+        max-width: 1200px;
+        margin: auto;
+        padding: 16px 25px;
+      }
+      .wrapper {
+        .main-content {
+          @include max-width-750px();
+          .title {
+            @include text (35px, 600, $primary_text_color, 0);
+          }
+          .comment-item {
+            .commentator {
+              img {}
+            }
+
+            .comment {
+              .name {}
+
+              .time {}
+
+              .opinion {}
+
+              .reply-btn {}
+
+              .comment-item {
+                .commentator {
+                  img {}
+                }
+
+                .comment {
+                  .name {}
+
+                  .time {}
+
+                  .opinion {}
+
+                  .reply-btn {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blog-single-5 {
+    .container-fluid {
+      .wrapper {
+        .main-content {
+          .title {}
+
+          .posts {
+            .column {
+              .box {
+                .card {
+                  a {}
+                }
+
+                .card-body {
+                  .card-grid {
+                    .card-grid-column1 {
+                      a {
+                        .card-title {}
+                      }
+
+                      .card-text {}
+                    }
+
+                    .card-grid-column2 {
+                      .imgae-caption {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blog-single-6 {
+    .container-fluid {
+      .wrapper {
+        .main-content {
+          .title {}
+
+          .main-form {
+            .form-input {
+              input {}
+
+              .contact-textarea {}
+            }
+
+            .btn-contain {
+              .btn-add {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

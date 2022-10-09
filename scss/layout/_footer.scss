@@ -1,0 +1,130 @@
+@import "../foundation/variables";
+@import "../foundation/mixin";
+@import "../foundation/base";
+@import "../foundation/sanitize";
+footer {
+  margin-top: 200px;
+  background: #f7f9fc;
+  padding: 50px 0;
+  width: 100%;
+  .container-fluid {
+    max-width: 1200px;
+    .wrapper {
+      .main-row {
+        padding: 30px 0;
+        gap: 30px;
+        .column {
+          .footer-heading {
+            h3 {
+              @include text(20px, 700, $primary_text_color, 0);
+              line-height: 25px;
+              margin-bottom: 30px;
+            }
+          }
+          .footer-body {
+            ul {
+              list-style: none;
+              padding: 0;
+              line-height: 35px;
+              li {
+                @include text(15px, 400, #656f7b, 0);
+                // margin-bottom: 30px;
+                text-transform: capitalize;
+                padding: 0;
+              }
+            }
+          }
+        }
+        .form-handle {
+          .footer-body {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+            .end-column {
+              h4 {
+                @include text(18px, 500, $primary_text_color, 0);
+                line-height: 25px;
+                padding: 20px 0;
+              }
+              form {
+                input {
+                  background: #f7f9fc;
+                  border: none;
+                  padding: 12px 20px;
+                  font-size: 16px;
+                  outline: none;
+                  width: 70%;
+                  color: $primary_text_color;
+                  font-weight: 600;
+                  border-radius: 5px;
+                }
+                button {
+                  text-transform: uppercase;
+                  @include button-without-hover(
+                    14px,
+                    700,
+                    $tertiary_text_color,
+                    5px,
+                    30px,
+                    10px,
+                    #fff,
+                    $tertiary_text_color
+                  );
+                }
+              }
+              p {
+                margin-top: 20px;
+                @include text(16px, 500, #5a5a5a, 0);
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+      .copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .columns {
+          p {
+            line-height: 22px;
+            color: #5a5a5a;
+            font-size: 16px;
+            a {
+              text-decoration: none;
+              color: #5a5a5a;
+              font-size: 16px;
+              transition: all 0.3s;
+              &:hover{
+                color: $tertiary_text_color;
+              }
+            }
+          }
+        }
+        .columns-2 {
+          .social {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            li {
+                margin: 0 10px;
+              a {
+                color: $primary_text_color;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                display: inline-block;
+                border-radius: 50%;
+                text-align: center;
+                i {
+                    font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import "../foundation/variables";
+@import "../foundation/mixin";
+@import "../foundation/base";
+@import "../foundation/sanitize";
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 90px;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+  .navigation {
+    position: relative;
+    .container-fluid {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 25px;
+      .logo {
+        margin: 0;
+        padding: 0;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $tertiary_text_color;
+        letter-spacing: -1px;
+      }
+      .navbar-toggler {
+        background: #dc4f72;
+        i {
+          color: #fff;
+        }
+      }
+      .menu {
+        .list {
+          .home {
+            .nav-link {
+              @include text(16px, 400, $primary_text_color, 0);
+            }
+          }
+          .about {
+            .nav-link {
+              @include text(16px, 400, $primary_text_color, 0);
+            }
+          }
+          .service {
+            .nav-link {
+              @include text(16px, 400, $primary_text_color, 0);
+            }
+          }
+          .page {
+            .nav-link {
+              @include text(16px, 400, $primary_text_color, 0);
+              a {
+                i {
+                  font-size: 14px !important;
+                  padding-left: 2px !important;
+                }
+              }
+            }
+            ul {
+              li {
+                a {
+                }
+              }
+            }
+          }
+          .contact {
+            .nav-link {
+              @include text(16px, 400, $primary_text_color, 0);
+            }
+          }
+          .schedule {
+            &:hover {
+              background: transparent;
+            }
+            a.button-schedule {
+              text-transform: uppercase;
+              @include button(
+                14px,
+                700,
+                $tertiary_text_color,
+                5px,
+                30px,
+                10px,
+                #fff,
+                $tertiary_text_color
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.navbar-nav .nav-item:hover {
+  background-color: rgba(180, 190, 203, 0.4);
+}

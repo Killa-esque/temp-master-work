@@ -1,0 +1,63 @@
+@mixin devicePC {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+@mixin deviceSP {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin heading {
+	@media screen and (max-width:295px) {
+		flex-wrap: nowrap;
+	}
+	@media screen and (max-width:229px) {
+		flex-wrap: wrap;
+		overflow: visible;
+	}
+}
+@mixin text ($fs, $fw, $color, $spacing) {
+	font-size: $fs;
+	font-weight: $fw;
+	color: $color;
+	letter-spacing: $spacing;
+}
+@mixin button ($fs, $fw, $color, $rad, $padding_x ,$padding_y,$text_color_hover,$bg_color_hover) {
+	font-size: $fs;
+	font-weight: $fw;
+	color: $color;
+	background: #fff;
+	border: 1px solid $color;
+	border-radius: $rad;
+	padding: $padding_y $padding_x;
+	transition: 0.3s ease-out;
+	&:hover{
+		color: $text_color_hover;
+		background: $bg_color_hover;
+	}
+}
+@mixin button-without-hover ($fs, $fw, $color, $rad, $padding_x ,$padding_y,$text_color_hover,$bg_color_hover) {
+	font-size: $fs;
+	font-weight: $fw;
+	color: #fff;
+	background: $color;
+	border: 1px solid $color;
+	border-radius: $rad;
+	padding: $padding_y $padding_x;
+}
+@mixin max-width-750px() {
+	max-width: 750px;
+	margin: 0 auto;
+}
+@mixin py-between-each-para (){
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+@mixin hover-translateY (){
+	transition: 0.3s ease-in-out;
+	border-radius: 10px;
+	&:hover{
+		transform: translateY(-5px);
+	}
+}
